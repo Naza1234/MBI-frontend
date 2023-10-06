@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style/logs.css">
+    <title>Sign up</title>
+</head>
+<body>
+  <form action="">
+    <h1>
+        Get in on the <br> Action 
+    </h1>
+   
+     <ul>
+        <li>
+            
+                Full Name
+                <input type="text" placeholder="Full Name" required>
+            
+        </li>
+      
+        <li>
+            
+                Email
+                <input type="email" placeholder="@example.com" required>
+            
+        </li>
+       
+        <li>
+            
+                Password
+                <input type="password" required>
+            
+        </li>
+       
+    </ul>
+     <h6>
+        
+    </h6>
+  
+    <button class="button">
+        Join
+    </button>
+    <a href="./login.html">
+        Have an account? <b>sign in.</b>
+    </a>
+  </form>
+  <section class="load_body">
+    <!-- Loader -->
+<div class="blobs">
+ <div class="blob-center"></div>
+ <div class="blob"></div>
+ <div class="blob"></div>
+ <div class="blob"></div>
+ <div class="blob"></div>
+ <div class="blob"></div>
+ <div class="blob"></div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<defs>
+ <filter id="goo">
+   <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+   <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+   <feBlend in="SourceGraphic" in2="goo" />
+   </filter>
+</defs>
+</svg>
+  </section>
+  <script src="../assets/app/logjs/singUp.js"></script>
+</body>
+</html>

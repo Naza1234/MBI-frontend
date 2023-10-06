@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style/logs.css">
+    <title>Request</title>
+</head>
+<body>
+  <form action="">
+    <h1>
+        Create Your Raffle
+    </h1>
+     <ul>
+        <li>
+            
+                Title
+                <input type="text" placeholder="Example" required >
+            
+        </li>
+      
+        <li>
+            
+                Sponsor
+                <input type="text" placeholder="Example" required>
+            
+        </li>
+       
+        <li>
+            
+                Prize
+                <input type="text" required>
+            
+        </li>
+        <li>
+            
+                Ticket price
+                <input type="text" placeholder="" required>
+            
+        </li>
+      
+        <li>
+            
+                Starting date    
+                <div>
+                    <input type="date" placeholder="" required >
+                    <input type="time" placeholder="" required >
+                </div>
+            
+        </li>
+       
+        <li>
+            
+                Draw date
+                <div>
+                    <input type="date" placeholder="" required>
+                    <input type="time" placeholder="" required>
+                </div>
+            
+        </li>
+        <li>
+            
+                Contact email
+                <input type="email" required >
+            
+        </li>
+      
+        <li>
+            
+                Raffle cover image
+                <input type="file" placeholder="" required>
+            
+        </li>
+       
+    </ul>
+  <h5>
+        
+  </h5>
+    <button class="button">
+        Submit  
+    </button>
+    <a href="./login.html">
+        Have an account? <b>sign in.</b>
+    </a>
+  </form>
+  <section class="load_body">
+        <!-- Loader -->
+    <div class="blobs">
+     <div class="blob-center"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+     <filter id="goo">
+       <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+       <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+       <feBlend in="SourceGraphic" in2="goo" />
+       </filter>
+    </defs>
+    </svg>
+      </section>
+      <script src="../assets/app/logjs/raffle.js"></script>
+</body>
+</html>

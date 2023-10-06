@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style/admine.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+       <ul>
+        <a href="#" class="active"><li> Home</li></a>
+        <a href="./request.html" ><li> Requests</li></a>
+        <a href="./payments.html" ><li> Payments</li></a>
+       </ul>
+    </nav>
+    <section class="heading-nav">
+       <div>
+        <a href="./doyouknow.html"><img src="../assets/image/thinking.png" alt=""></a>
+        <button>
+            <a href="./addraffle.html">
+                Add raffle
+            </a>
+        </button>
+       </div>
+        <div>
+            <h1>
+                No of Users
+            </h1>
+            <h2>
+                100
+            </h2>
+        </div>
+    </section>
+    <section class="body">
+     <section class="content">
+        <section class="items">
+            <h1>
+                Raffles Awaiting Draw
+            </h1>
+            <section class="item">
+               <ul>
+                
+
+               </ul>
+            </section>
+        </section>
+        <section class="items">
+            <h1>
+                Currently Active Raffles
+            </h1>
+            <section class="item">
+               <ul>
+                
+               </ul>
+            </section>
+        </section>
+        <section class="items">
+            <h1>
+                All Raffles
+            </h1>
+            <section class="item">
+               <ul>
+              
+               </ul>
+            </section>
+        </section>
+        <section class="items">
+            <h1>
+                Ended Raffles
+            </h1>
+            <section class="item">
+               <ul>
+              
+               </ul>
+            </section>
+        </section>
+     </section>
+     <section class="popup">
+        <section class="pop">
+            <div class="top">
+              
+            </div>
+            <div class="winners">
+                <h1>
+                    Winning Ticket
+                </h1>
+                <ul class="ul_it">
+                   
+                </ul>
+            </div>
+         <button class="re" onclick="relod()">
+            Cancle
+         </button>
+        </section>
+     </section>
+    </section>
+    
+    <section class="load_body">
+        <!-- Loader -->
+    <div class="blobs">
+     <div class="blob-center"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+     <filter id="goo">
+       <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+       <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+       <feBlend in="SourceGraphic" in2="goo" />
+       </filter>
+    </defs>
+    </svg>
+      </section>
+    <script src="../assets/app/adminjs/home.js"></script>
+</body>
+</html>
