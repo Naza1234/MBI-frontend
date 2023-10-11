@@ -1,5 +1,5 @@
-const apiUrl = 'http://localhost:3000';
-const winUrl="http://127.0.0.1:5500/"
+const apiUrl = 'https://mbiserver.onrender.com';
+const winUrl="https://mbiworld.online/"
 
 
 

@@ -1,6 +1,6 @@
 var nav=document.getElementsByTagName("nav")[0]
 const userID=localStorage.getItem('MBIUserId')
-const winUrl="http://127.0.0.1:5500/"
+const winUrl="https://mbiworld.online/"
 if(!userID){
     nav.innerHTML=`
        <div class="logo">
