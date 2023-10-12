@@ -1197,6 +1197,7 @@ header .search-heading p{
     
     header .write{
         height:500px;
+        padding: 0px;
         padding-top: 50px;
     }
     header .write h1{

@@ -1,5 +1,5 @@
 const apiUrl = 'https://mbiserver.onrender.com';
-const winUrl="https://mbiworld.online/"
+const winUrl="https://mbiworld.org/"
 const currentURL = window.location
 const ToCome =[]
 const OnGoing=[]
@@ -181,7 +181,7 @@ function pop(id) {
             </span 
             <span >
                 <p>
-                       Ticket Told:
+                       Ticket Sold:
                 </p>
                 <h2 class="Ticket-available">
                 load...

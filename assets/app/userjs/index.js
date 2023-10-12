@@ -50,7 +50,6 @@ fetch(apiUrl + `/Raffle`)
         activeunction(data[i])
     }
    }
-   console.log(OnGoing);
    cal()
    manual()
    activeunctionclick()
@@ -187,6 +186,7 @@ function activeunction(data) {
 }
 
 function activeunctionclick(){
+    console.log("IT IS CLICKING");
   var items=document.getElementsByClassName("itemcard")
   for (let i = 0; i <items.length; i++) {
     const element = items[i];
