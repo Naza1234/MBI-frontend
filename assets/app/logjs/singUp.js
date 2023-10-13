@@ -39,17 +39,38 @@ fetch(`${apiUrl}/user/signup`, requestOptions)
   })
   .then((data) => {
     // Handle the response data here
-    console.log('Response Data:', data);
-        if (errorIs) {
-            document.getElementsByTagName("h6")[0].innerHTML=data.message
-            document.querySelector(".load_body").classList.remove("loader_out")
-        }else{         
-          localStorage.setItem('MBIUserId',data._id);
-          window.location = `${winUrl}`
-        }
-          // Store the user ID in local storage
-         // You can now access the user ID using localStorage.getItem('MBIUserId')
-          console.log('Stored User ID:', localStorage.getItem('MBIUserId'));
+    const params = {
+      email: input[1].value,
+      username: input[0].value,
+    };
+    
+    // Create the fetch options
+    const requestOptionsforemail = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(params),
+    };
+    fetch(`${apiUrl}/email/congmail`, requestOptionsforemail)
+    .then((response) => {      
+      return response.json();
+    })
+    .then((data) => {
+            if (errorIs) {
+                document.getElementsByTagName("h6")[0].innerHTML=data.message
+                document.querySelector(".load_body").classList.remove("loader_out")
+            }else{         
+              localStorage.setItem('MBIUserId',data._id);
+              window.location = `${winUrl}`
+            }
+              // Store the user ID in local storage
+             // You can now access the user ID using localStorage.getItem('MBIUserId')        
+    })
+    .catch((error) => {
+      // Handle any errors
+      console.error('Error:', error);
+    });
     
   })
   .catch((error) => {
