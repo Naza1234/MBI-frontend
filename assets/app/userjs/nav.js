@@ -28,7 +28,7 @@ if(!userID){
             profile
         </button>
         </a>
-                    <img src="http://127.0.0.1:5500/assets/image/exit.png" alt="" onclick="logout()">
+                    <img src="${winUrl}/assets/image/exit.png" alt="" onclick="logout()">
                 </div>
     ` 
 }
