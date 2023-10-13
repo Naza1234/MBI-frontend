@@ -50,7 +50,9 @@ fetch(apiUrl + `/Raffle`)
         activeunction(data[i])
     }
    }
-   cal()
+   if(ToCome.length>0){
+       cal()
+   }
    manual()
    activeunctionclick()
 })
