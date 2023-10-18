@@ -26,7 +26,6 @@
 ::-webkit-scrollbar-thumb{
     background-color: var(--orang);
 }
-::-webkit-scrollbar{}
 
 body{
     display: grid;
@@ -231,6 +230,7 @@ nav ul a:not(.active){
     width: 100%;
     height: 65%;
     object-fit: cover;
+    pointer-events: none;
     object-position: center;
     pointer-events: none;
 }
@@ -252,6 +252,7 @@ nav ul a:not(.active){
     pointer-events: none;
     font-weight: 500;
     line-height: normal; 
+    pointer-events: none;
 }
 .item ul li .write p{
     color: var(--gray-darck, #333);
@@ -261,6 +262,7 @@ nav ul a:not(.active){
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    pointer-events: none;
 }
 .item ul li .write .win{
     width: 30px;
@@ -269,6 +271,7 @@ nav ul a:not(.active){
     position: absolute;
     right: 10px;
     bottom: 20%;
+    pointer-events: visible;
     cursor: pointer;
 }
 
@@ -305,6 +308,18 @@ nav ul a:not(.active){
     width: 350px;
     display: flex;
     flex-direction: column;
+}
+.popup .pop .extentionicons{
+  width: 100%;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 10px;
+}
+.pop .extentionicons img{
+  width: 25px;
+  height: auto;
 }
 .re{
   width: 150px;
@@ -463,9 +478,6 @@ line-height: normal;
     font-weight: 500;
     line-height: normal;
 }
-.pop .top  details{
-   
-}
 .pop .top  details input{
     background-color: #00000025;
     height: 40px;
@@ -535,9 +547,6 @@ line-height: normal;
     font-weight: 400;
     line-height: normal;
 }
-.rq ul li{}
-.rq ul li{}
-.rq ul li{}
 
 .pop-pay{
     width:350px;
@@ -717,9 +726,6 @@ line-height: normal;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.doyouknoe form{}
-.doyouknoe form{}
-
 
 
 

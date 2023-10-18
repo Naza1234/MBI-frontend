@@ -24,7 +24,6 @@ fetch(apiUrl + `/Raffle`)
     AllRaffle(data[i])
     if (data[i].StartingDate>formattedDateTime) {
         ToCome.push(data[i])
-   
     }
     if(formattedDateTime>data[i].StartingDate && data[i].DrawDate>formattedDateTime){
         OnGoing.push(data[i])
@@ -43,7 +42,7 @@ fetch(apiUrl + `/Raffle`)
 
 function Ended(data){
    var html=`
-   <li>
+   <li >
    <img src="${data.CoverImg}" alt="">
    <div class="write">
    <h6 class="hid">${data._id}</h6>
@@ -66,7 +65,7 @@ function Ended(data){
 
 function onGoing(data){
     var html=`
-    <li>
+    <li class="active">
     <h6 class="hid">${data._id}</h6>
     <img src="${data.CoverImg}" alt="">
     <div class="write">
@@ -83,6 +82,7 @@ function onGoing(data){
     `
     var body=document.getElementsByClassName("items")[1].getElementsByTagName("ul")[0]
     body.insertAdjacentHTML('beforeend',html)
+    active()
 }
 
 function AllRaffle(data){
@@ -134,7 +134,6 @@ function complet(data){
 var rid
 
 function activebtn(){
-    console.log(56);
     var btn=document.getElementsByClassName("win")
     for (let i = 0; i < btn.length; i++) {
     const element = btn[i];
@@ -222,14 +221,7 @@ function pop(id) {
  
 }
 
-function update(){
-    console.log(rid);
-    fetch(apiUrl + `/Raffle/ticketBoth/`+rid)
-    .then((res)=>res.json())
-    .then((data)=>{
-        document.getElementsByClassName("Ticket-available")[0].innerHTML = data.length
-    })
-}
+
 
 function fetchPaymentGateway (){
     document.querySelector(".load_body").classList.add("loader_out")
@@ -303,4 +295,106 @@ function fetchPaymentGateway (){
 
 function relod(){
     window.location = `${currentURL}`
+}
+function active(){
+    var btn=document.getElementsByClassName("win")
+    for (let i = 0; i < btn.length; i++) {
+    const element = btn[i];
+    element.addEventListener("click",(e)=>{
+        document.querySelector(".load_body").classList.add("loader_out")
+        var nbtn=e.target
+        var id=nbtn.getElementsByClassName("hid")[0].innerHTML
+        rid=id
+        console.log(id);
+        items(id)
+    })
+   }
+}
+function items(id){
+    fetch(apiUrl + `/Raffle/`+ id)
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(data);
+        document.getElementsByClassName("popup")[0].classList.add("see")
+        document.getElementsByClassName("pop")[0].innerHTML=`
+            <img src="${data.CoverImg}" alt="">
+            <div class="write">
+                
+                 <h1>
+                    ${data.Title}
+                </h1>
+                <span>
+                    <p>
+                         Sponsor:
+                    </p>
+                    <h2>
+                    ${data.Sponsor}
+                    </h2>
+                </span>
+                <span>
+                    <p>
+                           Raffle Prize:
+                    </p>
+                    <h2>
+                    ${data.Prize}
+                    </h2>
+                </span 
+                <span >
+                    <p>
+                           Ticket Sold:
+                    </p>
+                    <h2 class="Ticket-available">
+                    load...
+                    </h2>
+                </span>
+                <span>
+                    <p>
+                           Draw Date:
+                    </p>
+                    <h2>
+                    ${data.DrawDate}
+                    </h2>
+                </span>
+              
+            </div>
+            </div>
+       
+        `
+        document.querySelector(".load_body").classList.remove("loader_out")
+        update()
+    })
+}
+
+function update(){
+    fetch(apiUrl + `/Raffle/ticketBoth/`+rid)
+    .then((res)=>res.json())
+    .then((data)=>{
+        document.getElementsByClassName("Ticket-available")[0].innerHTML = data.length
+    })
+}
+
+function edit(){
+    var perent= document.getElementsByClassName("top")[0]
+    var id=perent.getElementsByClassName("hid")[0]
+    window.location = `${winUrl}/admine/editraffle.html?raffleID=${id}`
+}
+function Delete(){
+    document.querySelector(".load_body").classList.add("loader_out")
+    var perent= document.getElementsByClassName("top")[0]
+    var id=perent.getElementsByClassName("hid")[0]
+    fetch(apiUrl + `/Raffle/`+id, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        // You can add other headers like authorization if needed
+        },
+      })
+      .then((res)=>res.json())
+        .then((data) => {
+            document.querySelector(".load_body").classList.remove("loader_out")
+        })
+        .catch((error) => {
+          // Handle errors, e.g., network issues or server errors
+          console.error("Error deleting item:", error);
+        });
 }
