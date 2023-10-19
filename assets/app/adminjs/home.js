@@ -312,50 +312,55 @@ function items(id){
     fetch(apiUrl + `/Raffle/`+ id)
     .then((res)=>res.json())
     .then((data)=>{
-        console.log(data);
         document.getElementsByClassName("popup")[0].classList.add("see")
         document.getElementsByClassName("pop")[0].innerHTML=`
-            <img src="${data.CoverImg}" alt="">
-            <div class="write">
-                
-                 <h1>
-                    ${data.Title}
-                </h1>
-                <span>
-                    <p>
-                         Sponsor:
-                    </p>
-                    <h2>
-                    ${data.Sponsor}
-                    </h2>
-                </span>
-                <span>
-                    <p>
-                           Raffle Prize:
-                    </p>
-                    <h2>
-                    ${data.Prize}
-                    </h2>
-                </span 
-                <span >
-                    <p>
-                           Ticket Sold:
-                    </p>
-                    <h2 class="Ticket-available">
-                    load...
-                    </h2>
-                </span>
-                <span>
-                    <p>
-                           Draw Date:
-                    </p>
-                    <h2>
-                    ${data.DrawDate}
-                    </h2>
-                </span>
+        <div class="extentionicons">
+        <img src="../assets/image/edit.png" alt="" class="edit" onclick="edit()">
+        <img src="../assets/image/delete.png" alt="" class="delete" onclick="Delete()" >
+        </div>
+        <div class="top">
               
-            </div>
-            </div>
+        <img src="${data.CoverImg}" alt="">
+        <div class="write">
+            
+             <h1>
+                ${data.Title}
+            </h1>
+            <span>
+                <p>
+                     Sponsor:
+                </p>
+                <h2>
+                ${data.Sponsor}
+                </h2>
+            </span>
+            <span>
+                <p>
+                       Raffle Prize:
+                </p>
+                <h2>
+                ${data.Prize}
+                </h2>
+            </span 
+            <span >
+                <p>
+                       Ticket Sold:
+                </p>
+                <h2 class="Ticket-available">
+                load...
+                </h2>
+            </span>
+            <span>
+                <p>
+                       Draw Date:
+                </p>
+                <h2>
+                ${data.DrawDate}
+                </h2>
+            </span>
+          
+        </div>
+        </div>
        
         `
         document.querySelector(".load_body").classList.remove("loader_out")
@@ -374,8 +379,7 @@ function update(){
 function edit(){
     var perent= document.getElementsByClassName("top")[0]
     var id=perent.getElementsByClassName("hid")[0]
-    console.log(`${winUrl}/admine/editraffle.html?raffleID=${rid}`);
-    // window.location = `${winUrl}/admine/editraffle.html?raffleID=${id}`
+    window.location = `${winUrl}/admine/editraffle.html?raffleID=${id}`
 }
 function Delete(){
     document.querySelector(".load_body").classList.add("loader_out")
