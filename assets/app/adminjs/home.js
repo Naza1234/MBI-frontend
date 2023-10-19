@@ -131,7 +131,7 @@ function complet(data){
 
 
 
-var rid
+var rid 
 
 function activebtn(){
     var btn=document.getElementsByClassName("win")
@@ -144,7 +144,7 @@ function activebtn(){
         var cont = nbtn.parentElement;
         var id=cont.getElementsByClassName("hid")[0].innerHTML
         rid=id
-        console.log(id);
+        console.log(rid);
         pop(id)
     })
    }
@@ -242,9 +242,7 @@ function fetchPaymentGateway (){
             return response.json();
           })
         .then((data) => {
-                console.log('Selected Payments:', data.selectedPayments);
-                console.log('Unselected Payments:', data.unselectedPayments);
-                console.log('Selected Tickets:', data.selectedTickets);
+                
                 dit(data.selectedTickets)
                 const params = {
                     Ended:true,       
@@ -297,7 +295,7 @@ function relod(){
     window.location = `${currentURL}`
 }
 function active(){
-    var btn=document.getElementsByClassName("win")
+    var btn=document.getElementsByClassName("active")
     for (let i = 0; i < btn.length; i++) {
     const element = btn[i];
     element.addEventListener("click",(e)=>{
@@ -305,7 +303,7 @@ function active(){
         var nbtn=e.target
         var id=nbtn.getElementsByClassName("hid")[0].innerHTML
         rid=id
-        console.log(id);
+        console.log(id,rid);
         items(id)
     })
    }
@@ -376,7 +374,8 @@ function update(){
 function edit(){
     var perent= document.getElementsByClassName("top")[0]
     var id=perent.getElementsByClassName("hid")[0]
-    window.location = `${winUrl}/admine/editraffle.html?raffleID=${id}`
+    console.log(${winUrl}/admine/editraffle.html?raffleID=${rid});
+    // window.location = `${winUrl}/admine/editraffle.html?raffleID=${id}`
 }
 function Delete(){
     document.querySelector(".load_body").classList.add("loader_out")

@@ -316,6 +316,8 @@ nav ul a:not(.active){
   align-items: center;
   justify-content: right;
   gap: 10px;
+  padding-top: 2px;
+  padding-right: 2px;
 }
 .pop .extentionicons img{
   width: 25px;
