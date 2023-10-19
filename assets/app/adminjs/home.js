@@ -315,9 +315,15 @@ function items(id){
         document.getElementsByClassName("popup")[0].classList.add("see")
         document.getElementsByClassName("pop")[0].innerHTML=`
         <div class="extentionicons">
-        <img src="../assets/image/edit.png" alt="" class="edit" onclick="edit()">
-        <img src="../assets/image/delete.png" alt="" class="delete" onclick="Delete()" >
-        </div>
+                <div>
+                    <img src="../assets/image/next.png" alt="" onclick="close()">
+                </div>
+                <div>
+                    <img src="../assets/image/edit.png" alt="" class="edit" onclick="edit()">
+                    <img src="../assets/image/delete.png" alt="" class="delete" onclick="Delete()" >
+                 </div>
+
+                </div>
         <div class="top">
               
         <img src="${data.CoverImg}" alt="">
