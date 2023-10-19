@@ -374,7 +374,7 @@ function update(){
 function edit(){
     var perent= document.getElementsByClassName("top")[0]
     var id=perent.getElementsByClassName("hid")[0]
-    console.log(${winUrl}/admine/editraffle.html?raffleID=${rid});
+    console.log(`${winUrl}/admine/editraffle.html?raffleID=${rid}`);
     // window.location = `${winUrl}/admine/editraffle.html?raffleID=${id}`
 }
 function Delete(){
