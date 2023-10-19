@@ -93,18 +93,21 @@ form.addEventListener("submit", async (e)=>{
  
 
 
-const formData= new FormData()
-        formData.append('Title',input[0].value)
-        formData.append("Sponsor",input[1].value)
-        formData.append("Price", input[3].value )
-        formData.append("Prize", input[2].value )
-        formData.append("StartingDate", input[4].value + " " +input[5].value)
-        formData.append("DrawDate", input[6].value + " " +input[7].value)
-
+const params={
+        Title:input[0].value,
+        Sponsor:input[1].value,
+        Price:input[3].value,
+        Prize:input[2].value,
+        StartingDate:input[4].value + " " +input[5].value,
+        DrawDate:input[6].value + " " +input[7].value,
+}
 // Create the fetch options
 const requestOptions = {
   method: 'PUT',
-  body: formData,
+  headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(params),
 };
 
 
