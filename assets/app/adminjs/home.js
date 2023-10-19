@@ -391,7 +391,7 @@ function Delete(){
     document.querySelector(".load_body").classList.add("loader_out")
     var perent= document.getElementsByClassName("top")[0]
     var id=perent.getElementsByClassName("hid")[0]
-    fetch(apiUrl + `/Raffle/`+id, {
+    fetch(apiUrl + `/Raffle/`+rid, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
