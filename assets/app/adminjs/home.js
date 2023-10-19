@@ -379,7 +379,7 @@ function update(){
 function edit(){
     var perent= document.getElementsByClassName("top")[0]
     var id=perent.getElementsByClassName("hid")[0]
-    window.location = `${winUrl}/admine/editraffle.html?raffleID=${id}`
+    window.location = `${winUrl}/admine/editraffle.html?raffleID=${rid}`
 }
 function Delete(){
     document.querySelector(".load_body").classList.add("loader_out")
@@ -400,4 +400,7 @@ function Delete(){
           // Handle errors, e.g., network issues or server errors
           console.error("Error deleting item:", error);
         });
+}
+function close(){
+    document.getElementsByClassName("popup")[0].classList.remove("see")  
 }

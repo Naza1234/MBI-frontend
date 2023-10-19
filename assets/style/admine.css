@@ -311,13 +311,17 @@ nav ul a:not(.active){
 }
 .popup .pop .extentionicons{
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 4px;
   display: flex;
   align-items: center;
-  justify-content: right;
-  gap: 10px;
+  justify-content: space-between;
+  padding-left: 2px;
   padding-top: 2px;
   padding-right: 2px;
+}
+.pop .extentionicons div{
+  gap: 10px;
+  display: flex;
 }
 .pop .extentionicons img{
   width: 25px;
