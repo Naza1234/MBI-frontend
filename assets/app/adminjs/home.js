@@ -21,7 +21,9 @@ fetch(apiUrl + `/Raffle`)
 .then((data)=>{
     data.reverse()
    for (let i = 0; i < data.length; i++) {
-    AllRaffle(data[i])
+    if(!data[i].Ended){
+        AllRaffle(data[i])
+    }
     if (data[i].StartingDate>formattedDateTime) {
         ToCome.push(data[i])
     }
@@ -87,7 +89,7 @@ function onGoing(data){
 
 function AllRaffle(data){
     var html=`
-    <li>
+    <li class="active">
     <h6 class="hid">${data._id}</h6>
     <img src="${data.CoverImg}" alt="">
     <div class="write">
