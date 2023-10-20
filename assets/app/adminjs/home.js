@@ -316,7 +316,7 @@ function items(id){
         document.getElementsByClassName("pop")[0].innerHTML=`
         <div class="extentionicons">
                 <div>
-                    <img src="../assets/image/next.png" alt="" onclick="close()">
+                    <img src="../assets/image/next.png" alt="" onclick="closepop()">
                 </div>
                 <div>
                     <img src="../assets/image/edit.png" alt="" class="edit" onclick="edit()">
@@ -408,7 +408,7 @@ function Delete(){
           console.error("Error deleting item:", error);
         });
 }
-function close(){
+function closepop(){
     console.log("click");
     document.getElementsByClassName("popup")[0].classList.remove("see")  
 }
