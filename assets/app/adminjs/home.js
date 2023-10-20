@@ -409,5 +409,6 @@ function Delete(){
         });
 }
 function close(){
+    console.log("click");
     document.getElementsByClassName("popup")[0].classList.remove("see")  
 }
