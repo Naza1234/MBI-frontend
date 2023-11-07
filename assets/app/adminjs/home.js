@@ -90,18 +90,19 @@ function onGoing(data){
 function AllRaffle(data){
     var html=`
     <li class="active">
-    <h6 class="hid">${data._id}</h6>
     <img src="${data.CoverImg}" alt="">
     <div class="write">
-       <h2>
-       ${data.Title}
-       </h2>
+    <h6 class="hid">${data._id}</h6>
+    <h2>
+    ${data.Title}
+    </h2>
        <p>
            Due since
        </p>
        <h2>
        ${data.DrawDate}
        </h2>
+       <img src="../assets/image/copy.png" alt="" class="copy">
     </div>
     `
     var body=document.getElementsByClassName("items")[2].getElementsByTagName("ul")[0]
@@ -148,6 +149,35 @@ function activebtn(){
         rid=id
         console.log(rid);
         pop(id)
+    })
+   }
+
+    var btnc=document.getElementsByClassName("copy")
+    for (let i = 0; i < btnc.length; i++) {
+    const element = btnc[i];
+    element.addEventListener("click",(e)=>{
+        document.querySelector(".load_body").classList.add("loader_out")
+        var nbtn=e.target
+        console.log(nbtn);
+        var cont = nbtn.parentElement;
+        var id=cont.getElementsByClassName("hid")[0].innerHTML
+            // Create a textarea element to copy the content
+            var textarea = document.createElement("textarea");
+            textarea.value = `${winUrl}user/details.html?itemId=${id}`;
+            
+            // Append the textarea to the document
+            document.body.appendChild(textarea);
+            
+            // Select the text in the textarea
+            textarea.select();
+            
+            // Copy the selected text to the clipboard
+            document.execCommand("copy");
+            
+            // Remove the textarea from the document
+            document.body.removeChild(textarea);
+            
+        
     })
    }
 }

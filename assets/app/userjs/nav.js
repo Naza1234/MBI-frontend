@@ -8,7 +8,7 @@ if(!userID){
             <b>b</b>
             <b>i</b>
         </div>
-        <a href="${winUrl}logs/singup.html">
+        <a href="${winUrl}logs/singup.html?url=${window.location}">
         <button>
             join in
         </button>

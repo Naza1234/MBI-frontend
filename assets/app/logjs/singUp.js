@@ -2,6 +2,11 @@ const apiUrl = 'https://mbiserver.onrender.com';
 const winUrl="https://mbiworld.org/"
 
 
+// Get the current URL
+const currentURL = window.location.search;
+// get url params
+ const searchParams= new URLSearchParams(currentURL)
+ const winurlC=searchParams.get("url")
 
 const input=document.getElementsByTagName("input")
 const form=document.getElementsByTagName("form")[0]
@@ -62,7 +67,11 @@ fetch(`${apiUrl}/user/signup`, requestOptions)
                 document.querySelector(".load_body").classList.remove("loader_out")
             }else{         
               localStorage.setItem('MBIUserId',data._id);
-              window.location = `${winUrl}`
+              if(winurlC){
+                window.location=winurlC
+              }else{
+                window.location = `${winUrl}`
+              }
             }
               // Store the user ID in local storage
              // You can now access the user ID using localStorage.getItem('MBIUserId')        

@@ -226,6 +226,7 @@ nav ul a:not(.active){
     display: flex;
     flex-direction: column;
 }
+.item ul li img:not(.copy),
 .item ul li img:not(.win){
     width: 100%;
     height: 65%;
@@ -264,6 +265,7 @@ nav ul a:not(.active){
     line-height: normal;
     pointer-events: none;
 }
+.item ul li .write .copy,
 .item ul li .write .win{
     width: 30px;
     height: 26.221px;
@@ -318,6 +320,7 @@ nav ul a:not(.active){
   padding-left: 2px;
   padding-top: 2px;
   padding-right: 2px;
+  padding: 10px;
 }
 .pop .extentionicons div{
   gap: 10px;

@@ -7,7 +7,6 @@ const apiUrl = 'https://mbiserver.onrender.com';
      const searchParams= new URLSearchParams(currentURL)
      const itemId=searchParams.get("search")
 
-     console.log(itemId);
     document.getElementsByClassName("searchitem")[0].innerHTML=`Results for: ${itemId}`
     function search(){
         var param=document.getElementsByClassName("searchinput")[0].value
