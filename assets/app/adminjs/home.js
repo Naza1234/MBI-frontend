@@ -156,7 +156,6 @@ function activebtn(){
     for (let i = 0; i < btnc.length; i++) {
     const element = btnc[i];
     element.addEventListener("click",(e)=>{
-        document.querySelector(".load_body").classList.add("loader_out")
         var nbtn=e.target
         console.log(nbtn);
         var cont = nbtn.parentElement;

@@ -276,7 +276,11 @@ nav ul a:not(.active){
     pointer-events: visible;
     cursor: pointer;
 }
-
+.item ul li .write .copy{
+  height: 23px;
+  width: auto;
+  cursor: pointer;
+}
 
 .popup{
     width: 100%;
