@@ -59,6 +59,7 @@ function Ended(data){
       </h2>
         <img src="../assets/image/programming-arrows.png" alt="" class="win">
    </div>
+   </li>
    `
    var ul=document.getElementsByClassName("items")[0].getElementsByTagName("ul")[0]
    ul.insertAdjacentHTML('beforeend',html)
@@ -67,11 +68,11 @@ function Ended(data){
 
 function onGoing(data){
     var html=`
-    <li class="active">
-    <h6 class="hid">${data._id}</h6>
+    <li>
     <img src="${data.CoverImg}" alt="">
     <div class="write">
-       <h2>
+    <h6 class="hid">${data._id}</h6>
+    <h2>
        ${data.Title}
        </h2>
        <p>
@@ -80,7 +81,9 @@ function onGoing(data){
        <h2>
        ${data.DrawDate}
        </h2>
+       <img src="../assets/image/copy.png" alt="" class="copy">
     </div>
+    </li>
     `
     var body=document.getElementsByClassName("items")[1].getElementsByTagName("ul")[0]
     body.insertAdjacentHTML('beforeend',html)
@@ -102,8 +105,9 @@ function AllRaffle(data){
        <h2>
        ${data.DrawDate}
        </h2>
-       <img src="../assets/image/copy.png" alt="" class="copy">
+       
     </div>
+    </li>
     `
     var body=document.getElementsByClassName("items")[2].getElementsByTagName("ul")[0]
     body.insertAdjacentHTML('beforeend',html)
@@ -125,6 +129,7 @@ function complet(data){
        ${data.DrawDate}
        </h2>
     </div>
+    </li>
     `
     var body=document.getElementsByClassName("items")[3].getElementsByTagName("ul")[0]
    
