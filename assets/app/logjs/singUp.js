@@ -6,7 +6,7 @@ const winUrl="https://mbiworld.org/"
 const currentURL = window.location.search;
 // get url params
  const searchParams= new URLSearchParams(currentURL)
- const winurlC=searchParams.get("url")
+ const winurlC=localStorage.getItem("winurlc")
 
 const input=document.getElementsByTagName("input")
 const form=document.getElementsByTagName("form")[0]

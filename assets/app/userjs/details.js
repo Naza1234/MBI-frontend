@@ -123,6 +123,7 @@ function popup() {
         const element = items[i];
         if(!userID){
             window.location = `${winUrl}logs/login.html?url=${window.location}`
+            localStorage.setItem("winurlc",window.location)
         }else{
           element.addEventListener("click",(e)=>{
             var btn=e.target
