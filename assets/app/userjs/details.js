@@ -122,7 +122,7 @@ function popup() {
     for (let i = 0; i < items.length; i++) {
         const element = items[i];
         if(!userID){
-            window.location = `${winUrl}logs/login.html`
+            window.location = `${winUrl}logs/login.html?url=${window.location}`
         }else{
           element.addEventListener("click",(e)=>{
             var btn=e.target

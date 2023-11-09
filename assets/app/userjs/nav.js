@@ -36,4 +36,3 @@ function logout(){
     localStorage.removeItem("MBIUserId")
     window.location = window.location
 }
-console.log(userID);
