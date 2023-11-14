@@ -38,6 +38,7 @@ fetch(apiUrl + `/Raffle`)
     if(data[i].Ended){
         complet(data[i])
     }
+    activebtn()
    }
    
 })
