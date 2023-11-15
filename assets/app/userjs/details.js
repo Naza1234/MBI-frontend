@@ -207,16 +207,17 @@ function popupDit(x,y) {
 })
 
 }
+var paymentId="id not provided"
 function pay(){
     document.querySelector(".load_body").classList.add("loader_out")
-   var paymentId= document.querySelectorAll(".paymentId")[0].value
+    paymentId=document.querySelectorAll(".paymentId")[0].value
    var paymentImg= document.querySelectorAll(".paymentImg")[0].files[0]
 
-   if (paymentId && paymentImg) {
+   if (paymentImg) {
      const formData= new FormData()
         formData.append('UserID',userID)
         formData.append('TicketID',btnId)
-        formData.append("PaymentID",paymentId)
+        formData.append("PaymentID", paymentId ? paymentId : "id not provided")
         formData.append("WinStatuses", "inProgress" )
         formData.append("Approved",false)
         formData.append("ProofImg", paymentImg )
