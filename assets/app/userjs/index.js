@@ -102,21 +102,23 @@ var items
 var itembtn
 
 function manual(){
-    items[0].classList.add("see")
-     itembtn[0].classList.add("activeid")
-    for (let i = 0; i < items.length; i++) {
-        const element = itembtn[i];
-        element.addEventListener("click",()=>{
-            countUp=i
-            for (let i = 0; i < items.length; i++) {
-                itembtn[i].classList.remove("activeid")
-            }
-            for (let i = 0; i < items.length; i++) {
-                items[i].classList.remove("see")
-            }
-            items[i].classList.add("see")
-            itembtn[i].classList.add("activeid")
-        })
+    if (items.length>0) {        
+        items[0].classList.add("see")
+         itembtn[0].classList.add("activeid")
+        for (let i = 0; i < items.length; i++) {
+            const element = itembtn[i];
+            element.addEventListener("click",()=>{
+                countUp=i
+                for (let i = 0; i < items.length; i++) {
+                    itembtn[i].classList.remove("activeid")
+                }
+                for (let i = 0; i < items.length; i++) {
+                    items[i].classList.remove("see")
+                }
+                items[i].classList.add("see")
+                itembtn[i].classList.add("activeid")
+            })
+        }
     }
 }
 function cal() {
