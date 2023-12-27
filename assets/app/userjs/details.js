@@ -183,12 +183,12 @@ function popupDit(x,y) {
         </div>
         <div class="proof">
             <label>
-                payment ID:
-                <input type="text" class="paymentId">
+            payment id or tacking id of the transaction
+                <input type="text" class="paymentId" value="000">
             </label>
             <label>
                 Upload img for prove
-                <input type="file" class="paymentImg">
+                <input type="file" class="paymentImg" >
             </label>
         </div>
         <button onclick="pay()">
