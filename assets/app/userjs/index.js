@@ -98,11 +98,17 @@ function carrell(data){
 
 
 var countUp=0
-var items
+var items =[]
 var itembtn
 
+function cal() {
+    items=document.getElementsByClassName("content_items")
+    itembtn=document.getElementsByClassName("btn-id") 
+    setInterval(nestimg, 5000);
+    
+}
 function manual(){
-    if (items.length>0) {        
+    if (items.length > 0) {        
         items[0].classList.add("see")
          itembtn[0].classList.add("activeid")
         for (let i = 0; i < items.length; i++) {
@@ -121,12 +127,7 @@ function manual(){
         }
     }
 }
-function cal() {
-    items=document.getElementsByClassName("content_items")
-    itembtn=document.getElementsByClassName("btn-id") 
-    setInterval(nestimg, 5000);
-    
-}
+
 function nestimg(){
     for (let i = 0; i < items.length; i++) {
         items[i].classList.remove("see")
