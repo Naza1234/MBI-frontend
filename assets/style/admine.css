@@ -124,6 +124,12 @@ nav ul a:not(.active){
     border-radius: 5px;
     overflow: hidden;
 }
+.heading-nav div a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 .heading-nav div h1{
     width: 60%;
     background: var(--light-gray, #F5F5F5);

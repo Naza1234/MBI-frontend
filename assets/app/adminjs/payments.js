@@ -1,5 +1,7 @@
 const apiUrl = 'https://mbiserver.onrender.com';
 const winUrl="https://mbiworld.org/"
+
+
 const currentURL = window.location
 var id
 
