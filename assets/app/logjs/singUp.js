@@ -78,6 +78,7 @@ fetch(`${apiUrl}/user/signup`, requestOptions)
     })
     .catch((error) => {
       // Handle any errors
+      document.getElementsByTagName("h6")[0].innerHTML=data.message
       console.error('Error:', error);
     });
     

@@ -3,6 +3,17 @@ const winUrl="https://mbiworld.org/"
 var id
 
 
+if (userID) {
+   
+    fetch(apiUrl + `/user/`+userID)
+    .then((res)=>res.json())
+    .then((data)=>{
+      if(!data.UserIsOwner){
+       window.location=`${winUrl}logs/login.html`
+      }
+    })
+ }
+
 fetch(apiUrl + `/user`)
    .then((res)=>res.json())
    .then((data)=>{
