@@ -2,6 +2,7 @@ const apiUrl = 'https://mbiserver.onrender.com';
 const winUrl="https://mbiworld.org/"
 var id
 
+var userID=localStorage.getItem('MBIUserId')
 
 if (userID) {
    

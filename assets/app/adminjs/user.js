@@ -1,6 +1,5 @@
 
-
-const userID=localStorage.getItem('MBIUserId')
+var userID=localStorage.getItem('MBIUserId')
 if (userID) {
    fetch(apiUrl + `/user/`+userID)
    .then((res)=>res.json())
