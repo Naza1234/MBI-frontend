@@ -183,7 +183,7 @@ fetch(apiUrl + `/user`)
     for (let i = 0; i < items.length; i++) {
         const element = items[i];
         
-        var name=element.getElementsByClassName("name")[0].innerHTML
+        var name=element.getElementsByClassName("name")[0].textContent
         var email=element.getElementsByClassName("email")[0].textContent
         if(!name.includes(value) || !email.includes(value)){
            element.classList.add("hid")
